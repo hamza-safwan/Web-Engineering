@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <h1>Web Engineering Course Project: Inventory Management System</h1>
+    <p>The project is simply a demonstration of CRUD functionality using Java & Spring as backend technologies.</p>
+
+    <section>
+        <h2>Create Product</h2>
+        <form id="create-product-form">
+            <label for="create-name">Product Name</label>
+            <input type="text" id="create-name" name="name" required>
+            <br>
+            <label for="create-description">Description</label>
+            <input type="text" id="create-description" name="description" required>
+            <br>
+            <label for="create-price">Price</label>
+            <input type="number" step="0.01" id="create-price" name="price" required>
+            <br>
+            <button type="submit">Create Product</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Products List</h2>
+        <input type="text" id="search-bar" placeholder="Search for products..." style="width: 80%; max-width: 800px; margin-left: 240px;">
+        <table id="products-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Price (in Rupees)</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Update Product</h2>
+        <form id="update-product-form">
+            <label for="update-id">Product ID</label>
+            <input type="number" id="update-id" name="id" required readonly>
+            <br>
+            <label for="update-name">Name</label>
+            <input type="text" id="update-name" name="name" required>
+            <br>
+            <label for="update-description">Description</label>
+            <input type="text" id="update-description" name="description" required>
+            <br>
+            <label for="update-price">Price</label>
+            <input type="number" step="0.01" id="update-price" name="price" required>
+            <br>
+            <button type="submit">Update Product</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Delete Product</h2>
+        <form id="delete-product-form">
+            <label for="delete-id">Product ID</label>
+            <input type="number" id="delete-id" name="id" required>
+            <br>
+            <button type="submit">Delete Product</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
